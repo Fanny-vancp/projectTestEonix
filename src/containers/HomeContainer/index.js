@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import Home from '../../views/Home';
 import { makeSelectHomeContainerCounter } from './selector';
 import { incrementAction } from './action';
+import { decrementAction } from './action';
 import { useInjectReducer } from '../../utils/injectReducer';
 
 import reducer from './reducer';
@@ -26,6 +27,7 @@ export function mapDispatchToProps(dispatch) {
   return {
     dispatch,
     onIncrement: () => dispatch(incrementAction()),
+    onDecrement: () => dispatch(decrementAction()),
   };
 }
 

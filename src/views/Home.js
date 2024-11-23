@@ -3,11 +3,17 @@ import React from 'react';
 function Home({
   onIncrement,
   counter,
+  onDecrement,
 }) {
+
   return (
     <div>
-      <button>
-        Vous avez cliqué {counter} fois
+      Vous avez cliqué {counter} fois
+      <button onClick={onIncrement}>
+        + 
+      </button>
+      <button onClick={onDecrement}>
+        -
       </button>
     </div>
   );
