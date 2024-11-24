@@ -4,12 +4,12 @@ import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
 import Home from '../../views/Home';
-import { makeSelectHomeContainerCounter } from './selector';
-import { incrementAction } from './action';
-import { decrementAction } from './action';
+import { makeSelectHomeContainerCounter } from '../../modules/Counter/selector';
+import { incrementAction } from '../../modules/Counter/action';
+import { decrementAction } from '../../modules/Counter/action';
 import { useInjectReducer } from '../../utils/injectReducer';
 
-import reducer from './reducer';
+import reducer from '../../modules/Counter/reducer';
 
 const key = 'homeContainer';
 
