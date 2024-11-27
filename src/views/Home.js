@@ -11,6 +11,7 @@ function Home({
       <p>Vous avez cliqué {counter} fois</p>
       <Counter />
     </div>
+
   );
 };
 
