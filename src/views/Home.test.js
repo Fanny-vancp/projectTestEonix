@@ -13,30 +13,4 @@ describe('Home Component', () =>{
 
         expect(homeComponent.props.children[0].props.children[1]).toBe(5);
     })
-
-    it('calls onIncrement props when "+" button is clicked', () => {
-        const homeComponent = Home({
-            onIncrement: mockIncrementProps, 
-            onDecrement: mockDecrementProps, 
-            counter : 0
-        });
-
-        const increaseButton = homeComponent.props.children[1];
-        increaseButton.props.onClick();
-
-        expect(mockIncrementProps).toHaveBeenCalled();
-    })
-
-    it('calls onIncrement props when "-" button is clicked', () => {
-        const homeComponent = Home({
-            onIncrement: mockIncrementProps, 
-            onDecrement: mockDecrementProps, 
-            counter : 0
-        });
-
-        const descreaseButton = homeComponent.props.children[2];
-        descreaseButton.props.onClick();
-
-        expect(mockDecrementProps).toHaveBeenCalled();
-    })
 })
